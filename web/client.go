@@ -3,16 +3,19 @@ package web
 import (
 	"embed"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"mime"
 	"net/http"
 	"path"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 //go:embed client/dist/*
 var clientFS embed.FS
+// If you see "no matching files found", ensure the directory and files exist before building.
+// You can create a placeholder file to avoid build errors during development.
 
 const (
 	staticPath = "/"
