@@ -22,3 +22,6 @@ coverage
 coverage.*
 unit-tests.xml
 .idea
+
+# Local environment variables (API keys)
+.env
